@@ -17,7 +17,9 @@ contract DoNotAllowS3Policy is PermissionPolicyI {
     external
     returns (bool)
     {
-        return false;
+        bytes memory dataUriWithIndex = bytes(dataUri);
+        require(dataUriWithIndex[0] != 's' || dataUriWithIndex[1] != '3');
+        return true;
     }
 
 }
