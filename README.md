@@ -1,5 +1,5 @@
-# linnia-example-policy
-This repo contains a made-up example of a policy smart contract used for the Linnia policy based permissions abstraction.
+# stow-example-policy
+This repo contains a made-up example of a policy smart contract used for the Stow policy based permissions abstraction.
 
 This example, DoNotAllowS3Policy, implements the PermissionPolicyI solidity interface with a checkPolicy method.  The checkPolicy method checks the dataUri parameter and reverts if the dataUri starts with the letters 's3', otherwise true is returned.
 This would prevent granting access when the viewer is used amazon aws s3 to store the viewer's copy.  The Policy-based permissions abstraction is demonstrated with this a made-up example.
